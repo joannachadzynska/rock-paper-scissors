@@ -2,5 +2,15 @@ body {
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
-    font-family: "Barlow Semi Condensed", sans-serif;
+    background: hsl(214, 47%, 23%);
+    background: radial-gradient(
+        circle farthest-corner at top center,
+        hsl(214, 47%, 23%) 0%,
+        hsl(238, 48%, 15%) 100%
+    );
+    color: #ffffff;
+}
+
+button {
+    cursor: pointer;
 }

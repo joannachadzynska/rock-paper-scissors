@@ -3,3 +3,20 @@
         animation: App-logo-spin infinite 20s linear;
     }
 }
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding-block: 3em;
+    position: relative;
+}
+
+@media screen and (min-width: 768px) {
+    button:not(.close-btn) {
+        position: absolute;
+        bottom: 7%;
+        right: 5%;
+    }
+}

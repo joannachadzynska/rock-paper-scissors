@@ -1,21 +1,23 @@
-
+import { useState } from "react";
+import { Button, Header, Modal } from "../components";
+import rules from "../assets/images/image-rules.svg";
 import "./App.scss";
 
 function App() {
+    const [isOpenModal, setIsOpenModal] = useState(false);
     return (
-        <div className='App'>
-            <header className='App-header'>
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className='App-link'
-                    href='https://reactjs.org'
-                    target='_blank'
-                    rel='noopener noreferrer'>
-                    Learn React
-                </a>
-            </header>
+        <div className='container layout'>
+            <Header />
+            <main className='App-main'>main</main>
+            <Button onClick={() => setIsOpenModal(true)} role='rules'>
+                Rules
+            </Button>
+            <Modal
+                isOpen={isOpenModal}
+                handleClose={() => setIsOpenModal(false)}>
+                <h2>RULES</h2>
+                <img alt='rules' src={rules} />
+            </Modal>
         </div>
     );
 }

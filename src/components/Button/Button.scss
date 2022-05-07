@@ -1,0 +1,30 @@
+button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-size: clamp(0.975rem, 5vw, 1.35rem);
+    letter-spacing: 2px;
+    padding: 0.5em 1.75em;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+    &:hover,
+    &:focus {
+        background-color: rgba(255, 255, 255, 0.981);
+        color: var(--dark-text);
+    }
+
+    &[data-role="play"] {
+        background-color: #fff;
+        color: var(--dark-text);
+        transition: color 0.2s ease-in-out;
+
+        &:hover,
+        &:focus {
+            color: #ff3300;
+        }
+    }
+
+    align-self: center;
+}

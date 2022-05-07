@@ -1,0 +1,16 @@
+.header {
+    border: 3px solid var(--header-outline);
+    border-radius: 10px;
+    display: flex;
+
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1em;
+
+    .logo-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 50%;
+    }
+}
