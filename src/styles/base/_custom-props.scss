@@ -1,0 +1,12 @@
+@use "sass:color";
+@use "../abstracts/" as *;
+
+:root {
+    @each $name, $value in $colors {
+        --#{$name}: #{$value};
+    }
+
+    @each $name, $value in $gradients {
+        --#{$name}-gradient: #{$value};
+    }
+}
