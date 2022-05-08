@@ -1,0 +1,60 @@
+@use "../../styles/abstracts" as *;
+
+:root {
+    --border-color: var(--paper);
+    --box-shadow-color: var(--paper-shadow);
+    --border-house-color: var(--paper-house);
+    --box-shadow-house-color: var(--paper-house-shadow);
+}
+
+.play {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5em auto;
+    gap: 2em;
+
+    .game-button {
+        transform: translate(0, 0);
+    }
+
+    .user-choice {
+        .game-button {
+            @include gameButton(
+                var(--border-color),
+                var(--box-shadow-color),
+                5em,
+                12em,
+                20vw
+            );
+        }
+    }
+
+    .house-choice {
+        .game-button {
+            @include gameButton(
+                var(--border-house-color),
+                var(--box-shadow-house-color),
+                5em,
+                12em,
+                20vw
+            );
+        }
+    }
+
+    p {
+        font-size: clamp(1rem, 2vw, 2rem);
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+
+    .user-choice,
+    .house-choice {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 2em;
+    }
+}

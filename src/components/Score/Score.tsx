@@ -1,12 +1,13 @@
+import { useGameContext } from "constants/gameContext";
 import * as React from "react";
 
 import "./Score.scss";
 
-interface ScoreProps {
-    score?: number;
-}
+interface ScoreProps {}
 
-const Score: React.FC<ScoreProps> = ({ score = 12 }) => {
+const Score: React.FC<ScoreProps> = () => {
+    const { score } = useGameContext();
+
     return (
         <div className='score'>
             <p>Score</p>

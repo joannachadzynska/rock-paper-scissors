@@ -27,3 +27,13 @@
         }
     }
 }
+
+@mixin gameButton($border-color, $shadow-color, $width, $maxWidth, $scale) {
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1.2rem solid $border-color;
+    box-shadow: inset 0 5px 0 -1px #dddddd, 0 5px 0 0.1rem $shadow-color;
+    cursor: pointer;
+    width: clamp($width, $scale, $maxWidth);
+    aspect-ratio: 1;
+}
