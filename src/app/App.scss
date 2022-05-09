@@ -19,7 +19,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    button:not(.close-btn, .game-button) {
+    button:not(.close-btn, .game-button, .button[data-role="play"]) {
         position: absolute;
         bottom: 7%;
         right: 5%;

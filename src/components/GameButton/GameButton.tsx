@@ -10,7 +10,7 @@ interface GameButtonProps {
     name: string;
 }
 
-const GameButton: React.FC<GameButtonProps> = ({ onClick, name }) => {
+const GameButton: React.FC<GameButtonProps> = ({ onClick, name, children }) => {
     let [icon, setIcon] = React.useState("");
 
     React.useEffect(() => {
@@ -25,7 +25,16 @@ const GameButton: React.FC<GameButtonProps> = ({ onClick, name }) => {
 
     return (
         <Link to='/play' onClick={onClick} className='game-button'>
-            <img className='game-button-img' alt={name} src={icon} />
+            <img
+                className='game-button-img'
+                alt=''
+                src={
+                    name !== "blank"
+                        ? icon
+                        : "../../assets/images/icon-close.svg"
+                }
+            />
+            {children}
         </Link>
     );
 };

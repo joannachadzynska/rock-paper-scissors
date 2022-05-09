@@ -1,6 +1,6 @@
 {
-    "name": "caa",
-    "short_name": "aaa",
+    "name": "Rock Paper Scissors",
+    "short_name": "RPC",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -13,6 +13,7 @@
             "type": "image/png"
         }
     ],
+    "start_url": ".",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone"
