@@ -27,6 +27,7 @@
             align-items: flex-start;
             inset: 0;
             padding: 1rem;
+            gap: clamp(0.1em, 2vw, 2.5em);
         }
     }
 }

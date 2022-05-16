@@ -6,23 +6,30 @@
     align-items: center;
     justify-content: center;
     transition: transform 0.2s ease-in-out;
-    transform: translate(-60%, -60%);
+    transform: translate(0%, -70%);
     background-color: #fff;
 
     @include gameButton(var(--paper), var(--paper-shadow), 5rem, 7rem, 10vw);
 
     &:hover {
         color: inherit;
-        transform: translate(-60%, -60%) scale(1.05);
+        transform: translate(0%, -70%) scale(1.05);
+    }
+
+    @media screen and (min-width: 37em) {
+        transform: translate(0%, -60%);
+        &:hover {
+            transform: translate(0%, -60%) scale(1.05);
+        }
     }
 
     &:nth-of-type(2) {
         @include gameButton(var(--rock), var(--rock-shadow), 5rem, 7rem, 10vw);
         align-self: flex-end;
-        transform: translate(0, 0);
+        transform: translate(0, 50%);
 
         &:hover {
-            transform: scale(1.05);
+            transform: translate(0, 50%) scale(1.05);
         }
     }
 
@@ -34,10 +41,17 @@
             7rem,
             10vw
         );
-        transform: translate(60%, -60%);
+        transform: translate(0%, -70%);
 
         &:hover {
-            transform: translate(60%, -60%) scale(1.05);
+            transform: translate(0%, -70%) scale(1.05);
+        }
+
+        @media screen and (min-width: 37em) {
+            transform: translate(0%, -60%);
+            &:hover {
+                transform: translate(0%, -60%) scale(1.05);
+            }
         }
     }
 
