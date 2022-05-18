@@ -5,6 +5,7 @@ import "./App.scss";
 import { Game, Play } from "../containers";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GameContextProvider from "constants/gameContext";
+import NotFound from "./../containers/NotFound/NotFound";
 
 function App() {
     const [isOpenModal, setIsOpenModal] = useState(false);
@@ -18,6 +19,7 @@ function App() {
                         <Routes>
                             <Route path='/' element={<Game />} />
                             <Route path='/play' element={<Play />} />
+                            <Route path='*' element={<NotFound />} />
                         </Routes>
                     </main>
                     <Button onClick={() => setIsOpenModal(true)} role='rules'>
