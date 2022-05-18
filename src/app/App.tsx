@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Header, Modal } from "../components";
+import { Button, Footer, Header, Modal } from "../components";
 import rules from "../assets/images/image-rules.svg";
 import "./App.scss";
 import { Game, Play } from "../containers";
@@ -23,6 +23,8 @@ function App() {
                     <Button onClick={() => setIsOpenModal(true)} role='rules'>
                         Rules
                     </Button>
+
+                    <Footer />
                     <Modal
                         isOpen={isOpenModal}
                         handleClose={() => setIsOpenModal(false)}>

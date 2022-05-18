@@ -17,9 +17,9 @@
     }
 
     @media screen and (min-width: 37em) {
-        transform: translate(0%, -60%);
+        transform: translate(-15%, -60%);
         &:hover {
-            transform: translate(0%, -60%) scale(1.05);
+            transform: translate(-15%, -60%) scale(1.05);
         }
     }
 
@@ -48,9 +48,9 @@
         }
 
         @media screen and (min-width: 37em) {
-            transform: translate(0%, -60%);
+            transform: translate(15%, -60%);
             &:hover {
-                transform: translate(0%, -60%) scale(1.05);
+                transform: translate(15%, -60%) scale(1.05);
             }
         }
     }

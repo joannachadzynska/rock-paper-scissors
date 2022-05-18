@@ -110,7 +110,7 @@ const Play: React.FC<PlayProps> = () => {
             clearInterval(timeout);
             setHouseChoiceProperty("blank");
         };
-    }, [storedValue, counter]);
+    }, [storedValue, counter, houseChoice]);
 
     return (
         <div className='play-container'>
@@ -118,8 +118,8 @@ const Play: React.FC<PlayProps> = () => {
                 <div
                     className={
                         houseChoice && result === Result.YOU_WIN
-                            ? "user-choice win"
-                            : "user-choice"
+                            ? "user-choice btn win"
+                            : "user-choice btn"
                     }>
                     <GameButton name={storedValue} />
                     <p className='choice'>You picked</p>
@@ -127,8 +127,8 @@ const Play: React.FC<PlayProps> = () => {
                 <div
                     className={
                         houseChoice && result === Result.YOU_LOOSE
-                            ? "house-choice win"
-                            : "house-choice"
+                            ? "house-choice btn win"
+                            : "house-choice btn"
                     }>
                     {result && counter <= 0 ? (
                         <GameButton name={houseChoice} />

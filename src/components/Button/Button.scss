@@ -26,5 +26,19 @@ button {
         }
     }
 
-    align-self: center;
+    justify-self: center;
+
+    @media screen and (min-width: 768px) {
+        &:not(.close-btn, .game-button, .button[data-role="play"]) {
+            position: absolute;
+            bottom: 7%;
+            right: 5%;
+        }
+    }
+
+    @media screen and (min-width: 75em) {
+        &:not(.close-btn, .game-button, .button[data-role="play"]) {
+            right: -10%;
+        }
+    }
 }

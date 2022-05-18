@@ -5,23 +5,18 @@
 }
 
 .layout {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1em;
     height: 100vh;
-    padding-block: 3em;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
     position: relative;
 }
 
 .App-main {
-    flex: 1;
-}
-
-@media screen and (min-width: 768px) {
-    button:not(.close-btn, .game-button, .button[data-role="play"]) {
-        position: absolute;
-        bottom: 7%;
-        right: 5%;
-    }
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 1rem;
 }
