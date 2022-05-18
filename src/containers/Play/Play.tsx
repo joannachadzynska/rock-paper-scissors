@@ -110,6 +110,7 @@ const Play: React.FC<PlayProps> = () => {
             clearInterval(timeout);
             setHouseChoiceProperty("blank");
         };
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [storedValue, counter, houseChoice]);
 
     return (
