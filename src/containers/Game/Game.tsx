@@ -22,7 +22,7 @@ const buttons = [
 
 const Game: React.FC<GameProps> = () => {
     const { setUserChoice } = useGameContext();
-    const [storedValue, setValue] = useLocalStorage("userChoice", "");
+    const [setValue] = useLocalStorage("userChoice", "");
 
     const setChoice = (choice: string) => {
         setUserChoice(choice);

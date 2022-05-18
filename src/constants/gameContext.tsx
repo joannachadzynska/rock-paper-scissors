@@ -1,10 +1,5 @@
 import * as React from "react";
 
-export interface GameContext {
-    userChoice: string;
-    score: number;
-}
-
 export type GameContextType = {
     score: number;
     userChoice: string;
